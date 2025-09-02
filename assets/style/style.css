@@ -1,0 +1,500 @@
+/* Общие стили */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.kontejner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sekciya {
+    padding: 100px 0;
+}
+
+/* Шапка сайта */
+.fon-s-zatemneniem {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.zatemnitel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.golovnaya-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.logotip img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #e74c3c;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.navigaciya {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.ssylki-v-navigacii {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.ssylki-v-navigacii a {
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.ssylki-v-navigacii a:hover {
+    color: #e74c3c;
+}
+
+.ssylki-v-navigacii a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.ssylki-v-navigacii a:hover::after {
+    width: 100%;
+}
+
+.knopka-zakaza {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.knopka-zakaza:hover {
+    background-color: white;
+    color: #e74c3c;
+}
+
+.glavnyj-ekran {
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.glavnyj-ekran h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.glavnyj-ekran p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.tekst-na-yaponskom {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.otstup-dlya-logotipa, .otstup-dlya-knopki {
+    padding: 20px;
+}
+
+/* Секция "О нас" */
+.sekciya-o-nas {
+    background-color: white;
+}
+
+.zagolovok-soderzhimogo {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.zagolovok-soderzhimogo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.podzagolovok {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.nazvanie-stranicy {
+    font-size: 2rem;
+    color: #333;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: #e74c3c;
+}
+
+.obolochka-soderzhimogo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.osnovnoj-tekst p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.spisok-osobennostej {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.spisok-osobennostej li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.spisok-osobennostej li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+}
+
+.blok-shefa {
+    text-align: center;
+    margin-top: 60px;
+}
+.blok-shefa h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.blok-shefa img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e74c3c;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.opisanie-shefa {
+    font-style: italic;
+    color: #555;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Секция "Интересные факты" */
+.sekciya-interesnyh-faktov {
+    background-color: #f5f5f5;
+}
+
+.zagolovok-sekcii {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.zagolovok-sekcii::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #e74c3c;
+    margin: 20px auto;
+}
+
+.setka-faktov {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.kartochka-fakta {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartochka-fakta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.kartochka-fakta i {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.kartochka-fakta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.kartochka-fakta p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Секция "Отзывы" */
+.sekciya-otzyvov {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.setka-otzyvov {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.kartochka-otzyva {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.kartochka-otzyva:hover {
+    transform: translateY(-10px);
+}
+
+.shapka-otzyva {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #e74c3c;
+    color: white;
+}
+
+.shapka-otzyva img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.shapka-otzyva h3 {
+    font-size: 1.2rem;
+}
+
+.telo-otzyva {
+    padding: 25px;
+}
+
+.telo-otzyva p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.rejting {
+    color: #f1c40f;
+    font-size: 1.2rem;
+}
+
+/* Подвал */
+.podval {
+    background: #1a1a2e;
+    color: white;
+    padding: 80px 0 30px;
+}
+
+.soderzhimoe-podvala {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.logotip-v-podvale img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #e74c3c;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.logotip-v-podvale p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.kontakty h3, .chas-raboty h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #e74c3c;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.kontakty h3::after, .chas-raboty h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #e74c3c;
+}
+
+.kontakty p, .chas-raboty p {
+    color: #ddd;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.kontakty i, .chas-raboty i {
+    margin-right: 10px;
+    color: #e74c3c;
+    width: 20px;
+    text-align: center;
+}
+
+.niz-podvala {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    color: #aaa;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .glavnyj-ekran h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sekciya {
+        padding: 70px 0;
+    }
+
+    .golovnaya-panel {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+.otstup-dlya-logotipa {
+        margin-bottom: 20px;
+    }
+
+    .ssylki-v-navigacii {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .glavnyj-ekran h1 {
+        font-size: 3rem;
+    }
+
+    .glavnyj-ekran p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .glavnyj-ekran h1 {
+        font-size: 2.5rem;
+    }
+
+    .zagolovok-sekcii {
+        font-size: 2rem;
+    }
+
+    .knopka-zakaza {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
